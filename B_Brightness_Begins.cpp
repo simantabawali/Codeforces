@@ -22,7 +22,6 @@ int32_t main() {
             }
         }
         n += s + (k-n) - 1;
-        // if(k == 1) n = 2;
 
         cout<<n<<endl;
         
