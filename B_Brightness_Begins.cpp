@@ -10,6 +10,21 @@ int32_t main() {
     int t;
     cin >> t;
     while (t--) {
+        int k;
+        cin>>k;
+        int s=2,x = 2,n = 0;
+        while (true){
+            if(n + (s*s-x) >= k) break;
+            n += s*s - x;
+            if(s*s - x < k){
+                x = s*s +1;
+                s++;
+            }
+        }
+        n += s + (k-n) - 1;
+        // if(k == 1) n = 2;
+
+        cout<<n<<endl;
         
     }
     return 0;
