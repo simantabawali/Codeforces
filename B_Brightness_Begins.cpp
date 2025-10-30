@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
+// #define int long long
 #define fast_io ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 int32_t main() {
@@ -9,16 +9,16 @@ int32_t main() {
     int t;
     cin >> t;
     while (t--) {
-        int k;
+        long long k;
         cin >> k;
-        long long l = 1, r = 2*k;
-        while (l < r) {
-            long long mid = (l + r) / 2;
-            long long sq = (long long)sqrt(mid);
+        long long l = 1, r = 2e18;
+        while (r-l > 1) {
+            long long mid = (l + r) >> 1;
+            long long sq = int(sqrtl(mid));
             if (mid - sq >= k)
                 r = mid;
             else
-                l = mid + 1;
+                l = mid;
         }
         cout << r << endl;
     }
