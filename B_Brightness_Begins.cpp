@@ -14,8 +14,8 @@ int32_t main() {
         long long l = 1, r = 2e18;
         while (r-l > 1) {
             long long mid = (l + r) >> 1;
-            long long sq = int(sqrtl(mid));
-            if (mid - sq >= k)
+            long long sq = int(sqrtl(mid)); //sqrt double niye kaj kore || sqrtl long double niye kaj kre
+            if (mid - sq >= k) // long long sq = (long long)sqrt(mid); ata use koray onek boro mara khacchilam
                 r = mid;
             else
                 l = mid;
